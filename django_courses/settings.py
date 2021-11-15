@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'lesson_9',
 ]
 
+
 REST_FRAMEWORK ={
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE':10, #10 записей на одной странице
@@ -105,6 +106,13 @@ WSGI_APPLICATION = 'django_courses.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'db.sqlite3',
+#     }
+# }
 
 DATABASES = {
     'default': {
@@ -160,7 +168,7 @@ STATICFILES_FINDERS= [
 ]
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, '/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_ROOT = 'lesson_5/static/tmp/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "\\lesson_3\\static"), 
